@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda ki bilgiler</title>
+    <link rel="icon" type="png" href="resim/muhammed.jpg">
+    <style>
+           body{
+            background: black;
+            color: #000000;
+            font-family: verdana,Arial,Helvetica,sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+      
+        }
+        .sayfa{
+            width: 960px;
+            height: 1500px;
+            margin: auto;
+            background-color: rgb(10, 10, 10);
+        }
+        .ust{
+            background: #131313;
+        }
+        #logo{
+            float: left;
+            width: 260px;
+            margin-top: 7px;
+            margin-left: 10px;
+        }
+        
+        #logo h1{
+            margin: 0;
+            padding: 0;
+            font-size: 42px;
+            text-transform: uppercase;
+            
+        }
+        
+        #logo h1 a{
+            font-family: Georgia;
+            text-decoration: none;
+            color: #DBDBDB;
+            letter-spacing: 3px;
+        }
+
+        ul {
+           text-align: left;
+           display: inline;
+           margin: 0;
+           padding: 15px 4px 17px 0;
+           list-style: none;
+           box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+        }
+        ul li {
+           font: bold 12px/18px sans-serif;
+           display: inline-block;
+           margin-right: -4px;
+           position: relative;
+           padding: 15px 20px;
+           background: #fff;
+           cursor: pointer;
+           transition: all 0.2s;
+        }
+        ul li:hover {
+           background: #555;
+           color: #fff;
+        }
+        ul li ul {
+           padding: 0;
+           position: absolute;
+           border-radius:30px;
+           top: 48px;
+           left: -20px;
+           width: 125px;
+           box-shadow: none;
+           display: none;
+           opacity: 0;
+           visibility: hidden;
+           transition: opacity 0.2s;
+        }
+        ul li ul li { 
+           background:rgb(50, 50, 50); 
+           display: block; 
+           color: #fff;
+           text-shadow: 0 -1px 0 #000;
+        }
+        ul li ul li:hover { background: #666; }
+        ul li:hover ul {
+           display: block;
+           opacity: 1;
+           visibility: visible;
+        }
+        #logo p{
+            color: #DBDBDB;
+            font-family: Georgia;
+            margin-left: 3px;
+            margin-top: 0;
+            padding-top: 0;
+            letter-spacing: 2px;
+        }
+        
+        #menu{
+            float: right;
+            width: 650px;
+            margin: 30px 0 0 0;
+            padding: 0;
+            font-size: 13px;
+            text-align: right;
+        }
+        
+        #menu ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+         
+        }
+        
+        #menu ul li{
+            display: inline;
+            margin-right: 35px;
+            float: left;
+        }
+        
+        #menu ul li a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            
+        }
+        .resimler{
+         border-radius: 50px;
+         margin-right:15px;
+         display: inline-block;
+        }
+        .tanıtım{
+            color:darkred;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+           
+        }
+        .isimler{
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bolder;
+            display: inline-block;
+        }
+        
+        .hizalama_sol{
+            position: relative;
+            left: 80px;
+            
+          
+        }
+        .hizalama_orta{
+            position: relative;
+            top: -25px;
+            left: 430px;
+        }
+        .hizalama_sağ{
+            position: relative;
+            top: -45px;
+            left: 720px;
+            
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            transition: 1s;
+        }
+        .box:hover{
+            transform: scale(1.1);
+            z-index: 1;
+        }
+        .clear{
+            clear: both;
+        }
+        .hakkımızda{
+            height: 500px;
+            width: 800px;
+            font-weight: bold;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(213, 209, 209);
+            animation: px scroll infinite both;
+
+        }
+        .kutular{
+            color:red;
+            background-color: #333;
+            border-radius: 10%;
+            border:darkred 2px solid;
+            margin:10px;
+            transition:all 0.4s;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+        }
+        .kutular:hover{
+            transform: translateY(-5px);
+        }
+        .içerik_img{
+            margin-top:50px;
+            margin-left:40px;
+            width: 250px;
+            height: 250px;
+        }
+        .yazı{
+            font-family:'Courier New', Courier, monospace;
+            font-size: 20px;
+            color: darkred;
+            font-weight: bold;
+            margin-left: 350px;
+            margin-top: -200px;
+            padding:20px;
+            margin-top: -1150px;
+        }
+        .div-yazi{
+            box-shadow:inset 0 0 0.5em white;
+        }
+        button{
+            width: 150px;
+            height: 60px;
+            background-color: rgb(71, 71, 71);
+            border-radius:50px 45px 50px 45px;
+            color: white;
+            border-color: aqua;
+            transition:1s;
+            margin-left: 70px;
+        }
+        button:hover{
+            transform:translateY(-4px);
+        }
+        .resim2{
+            width: 250px;
+            height: 250px;
+            transition: hover .9s linear both;
+            border-radius: 20px 40px;
+
+        }
+        .resim3{
+            width: 250px;
+            height: 250px;
+            border-radius: 50px 10px;
+        }
+        .resim4{
+            width: 250px;
+            height: 250px;
+        }
+        .arkaplan_anasayfa{
+            position: relative;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            background-image:url(resim/Hoş\ manzara\ kullanılcak.jpg);
+            
+        }
+        
+ 
+
+    </style>
+</head>
+<body>
+    <div class="arkaplan_anasayfa">
+    <div class="sayfa">
+        <div class="ust">
+            <div id="logo">
+                <h1><a href="İndex.html">Darkness</a></h1>
+                <p>Darkness gaming</p>
+            </div>
+            <div id="menu">
+                <ul>
+                    <a href="İndex.html "><li class="kutular">Anasayfa</li></a>
+                    <a href="Hakkimizda.html"><li class="kutular">Hakkımızda</li></a>
+                    <li class="kutular">
+                      Ürünler
+                      <ul>
+                        <a href="Aksiyon.html" target="_blank"><li class="kutular">Aksiyon</li></a>
+                        <a href="Korku.html" target="_blank"><li class="kutular">Korku</li></a>
+                        <a href="Macera.html" target="_blank"><li class="kutular">Macera</li></a>
+                      </ul>
+                    </li></a>
+                    <a href="İletisim.html"><li class="kutular">İletişim</li></a>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="hakkımızda">
+            <img class="içerik_img" src="resim/mix foto.jpg"><br><img class="içerik_img" src="resim/dead space.jpg" class="resim2"><br><img class="içerik_img" src="resim/little nightmares.jpg" class="resim3 içerik_img"><br> <img src="resim/detroit.jpg" class="resim4 içerik_img"><div class="yazı div-yazi">
+                Darkness Game, oyun dünyasında bir tutkuyla başlayan bir yolculuktur. Amacımız, oyunculara benzersiz deneyimler sunarak onları karanlıkla dolu bir dünyaya sürüklemektir. Biz, oyun severlerin heyecanını ve macerayı yakalamasını sağlayan oyunlar ve hikayeler ortaya çıkarmak için bir araya gelen bir ekip olarak çalışıyoruz.
+
+Ekip olarak, sanat, tasarım ve teknolojiyi birleştirerek oyun dünyasında kalıcı bir iz bırakmayı hedefliyoruz. Her bir oyunumuz, derinlemesine düşünülmüş hikayeler ve zorlu oyun mekanikleriyle doludur. Karakterlerimiz canlanır ve oyun dünyamız gerçeklikten ayrılmaz bir şekilde oyuncuları içine çeker.
+
+Darkness Game, oyuncuların gerçeklikten kaçışı ve yeni dünyaların keşfi için bir sığınak olarak hizmet etmeyi amaçlar. Oyuncularımız, karanlıkta gizlenen sırları ortaya çıkarmak, zorlu düşmanlarla savaşmak ve kendi efsanelerini yaratmak için mücadele ederler. Biz, oyunlarımızı oynamanın sadece bir etkinlik olmadığını, aynı zamanda bir maceraya dönüşebileceğini düşünüyoruz.
+
+Darkness Game olarak, oyun geliştirme sürecinde oyuncularımızın geri bildirimlerine ve desteğine büyük önem veriyoruz. Sizler, bizi motive eden ve ileriye taşıyan en değerli varlıklarımızsınız. Her birinizin deneyimi ve katkısı, bizim için paha biçilmezdir.
+
+Bizler, Darkness Game olarak, sizi karanlık ve büyülü dünyamıza davet ediyoruz. Eşsiz hikayelerimiz ve oyunlarımızla sizi sürükleyici ve unutulmaz bir yolculuğa çıkaracak bir deneyim sunmayı amaçlıyoruz. Bizimle birlikte keşfedin, sınırları zorlayın ve Darkness Game dünyasında kendi yerinizi bulun.
+            </div>
+           <a class="button1" href="https://store.steampowered.com/?l=turkish"><button>
+              daha fazlası için
+            </button>
+           </a> 
+        </div>
+      
+    </div>
+</div>
+</body>
+</html>

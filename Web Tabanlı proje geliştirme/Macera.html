@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macera Oyunları</title>
+    <link rel="icon" type="resim/little nighmares" href="resim/muhammed.jpg">
+    <link rel="stylesheet" href="iletişim.html">
+    <link rel="stylesheet" href="hakkımızda.html">
+</head>
+   <style>
+    body{
+            background: #131313;
+            color: #525252;
+            font-family: verdana,Arial,Helvetica,sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+        .sayfa{
+            width: 960px;
+            margin: auto;
+        }
+        .ust{
+            background: #131313;
+        }
+        #logo{
+            float: left;
+            width: 260px;
+            margin-top: 7px;
+            margin-left: 10px;
+        }
+        
+        #logo h1{
+            margin: 0;
+            padding: 0;
+            font-size: 42px;
+            text-transform: uppercase;
+            
+        }
+        
+        #logo h1 a{
+            font-family: Georgia;
+            text-decoration: none;
+            color: #DBDBDB;
+            letter-spacing: 3px;
+        }
+
+        ul {
+           text-align: left;
+           display: inline;
+           margin: 0;
+           padding: 15px 4px 17px 0;
+           list-style: none;
+           box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+        }
+        ul li {
+           font: bold 12px/18px sans-serif;
+           display: inline-block;
+           margin-right: -4px;
+           position: relative;
+           padding: 15px 20px;
+           background: #fff;
+           cursor: pointer;
+           transition: all 0.2s;
+        }
+        ul li:hover {
+           background: #555;
+           color: #fff;
+        }
+        ul li ul {
+           padding: 0;
+           position: absolute;
+           border-radius:30px;
+           top: 48px;
+           left: -20px;
+           width: 125px;
+           box-shadow: none;
+           display: none;
+           opacity: 0;
+           visibility: hidden;
+           transition: opacity 0.2s;
+        }
+        ul li ul li { 
+           background:rgb(50, 50, 50); 
+           display: block; 
+           color: #fff;
+           text-shadow: 0 -1px 0 #000;
+        }
+        ul li ul li:hover { background: #666; }
+        ul li:hover ul {
+           display: block;
+           opacity: 1;
+           visibility: visible;
+        }
+        #logo p{
+            color: #DBDBDB;
+            font-family: Georgia;
+            margin-left: 3px;
+            margin-top: 0;
+            padding-top: 0;
+            letter-spacing: 2px;
+        }
+        
+        #menu{
+            float: right;
+            width: 650px;
+            margin: 30px 0 0 0;
+            padding: 0;
+            font-size: 13px;
+            text-align: right;
+        }
+        
+        #menu ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+         
+        }
+        
+        #menu ul li{
+            display: inline;
+            margin-right: 35px;
+            float: left;
+        }
+        
+        #menu ul li a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            
+        }
+        .resimler{
+         border-radius: 50px;
+         margin-right:15px;
+         display: inline-block;
+        }
+        .tanıtım{
+            color:darkred;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+           
+        }
+        .isimler{
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bolder;
+            display: inline-block;
+        }
+        
+        .hizalama_üst_sol{
+            position: relative;
+            top: 17px;
+            left: 40px;
+            
+          
+        }
+        .hizalama_üst_orta{
+            position: relative;
+            top: -7px;
+            left: 360px;
+        }
+        .hizalama_üst_sağ{
+            position: relative;
+            top: -30px;
+            left: 690px;
+            
+        }
+        .hizalama_orta_sol{
+            position: relative;
+            top: 22px;
+            left: 80px;
+        }
+        .hizalama_orta_orta{
+            position: relative;
+            top: 0px;
+            left: 390px;
+        }
+        .hizalama_orta_sağ{
+            position: relative;
+            top: -25px;
+            left: 700px;
+        }
+        .hizalama_alt_sol{
+            position: relative;
+            top: 15px;
+            left: 83px;
+        }
+        .hizalama_alt_orta{
+            position: relative;
+            top: -7px;
+            left: 360px;
+        }
+        .hizalama_alt_sağ{
+            position: relative;
+            top: -29px;
+            left: 670px;
+        }
+        .box{
+            margin-top: 10px;
+            width: 300px;
+            height: 300px;
+            transition: 1s;
+        }
+        .box:hover{
+            transform: scale(1.1);
+            z-index: 1;
+        }
+        .clear{
+            clear: both;
+        }
+        .kutular{
+            color:red;
+            background-color: #333;
+            border-radius: 10%;
+            border:darkred 2px solid;
+            margin:10px;
+            transition:all 0.4s;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+        }
+        p{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: darkred;
+        }
+        h1{
+            color: darkred;
+        }
+        .kutular:hover{
+            transform: translateY(-5px);
+        }
+        .arkaplan_anasayfa{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-image:url(resim/second\ son.jpg);
+            background-size: cover;
+        }
+        button{
+            width: 150px;
+            height: 60px;
+            background-color: rgb(71, 71, 71);
+            border-radius:50px 45px 50px 45px;
+            color: white;
+            border-color: aqua;
+            transition:1s;
+        }
+        button:hover{
+            transform:translateY(-4px);
+        }
+        
+        
+        
+    </style>
+</head>
+ 
+<body>
+    <div class="arkaplan_anasayfa">
+    <div class="sayfa">
+        <div class="ust">
+            <div id="logo">
+                <h1><a href="İndex.html">Darkness</a></h1>
+                <p>Darkness gaming</p>
+            </div>
+            <div id="menu">
+                <ul>
+                    <a href="İndex.html "><li class="kutular">Anasayfa</li></a>
+                    <a href="Hakkimizda.html"><li class="kutular">Hakkımızda</li></a>
+                    <li class="kutular">
+                      Ürünler
+                      <ul>
+                        <a href="Aksiyon.html"><li class="kutular">Aksiyon</li></a>
+                        <a href="Korku.html"><li class="kutular">Korku</li></a>
+                        <a href="Macera.html"><li class="kutular">Macera</li></a>
+                      </ul>
+                    </li></a>
+                    <a href="İletisim.html"><li class="kutular">İletişim</li></a>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+            <div class="orta">
+                <div>
+                    <a href="https://www.merlininkazani.com/infamous-second-son-inceleme-72247"><img title="Çizgi roman okumayı sever misiniz? Ben bayılırım. Çocukluğumun Şövalyenin Düşüşü ve Superman'in Ölümü'yle geçtiğini düşünecek olursak, kökleri çok derine inen bir tutku bu bendeki. Ve çizgi roman seven çoğu insan gibi, özellikle de süper güçlere sahip kahramanların hikâyeleri, ilgi alanımda ciddi bir yer kaplıyor. Haliyle inFamous, çizgi roman havası veren ara sahneleri, süper güçlere sahip kahramanları ve keskin bir ahlak çizgisiyle bana bir çok sözde süper kahraman oyunundan çok daha büyük keyif vermiştir hep. Daha Sucker Punch inFamous: Second Sonın PlayStation 4 e özel ilk oyunlardan biri olduğunu duyurduğunda, incelemesini bizzat yapmaya göz dikmiştim bile..." class="resimler box" src="resim/second son.jpg" width="300" height="300"></a>
+                    <a href="https://www.enucuzoyun.com/detroit-become-human/hikayesi/detroit-become-human-hikayesi"><img title="Oyun Kara, Connor ve Markus adlı üç androidin hikâyesine odaklanmaktadır. Hizmet androidi olan Kara evrilip bilinç sahibi olarak efendisinin kızıyla birlikte kaçmış, bakıcı android Markus kendisini androidlerin özgürlük mücadelesine adamış, Connor ise bilinç sahibi androidleri avlamak üzere görevlendirilmiştir." class="resimler box" src="resim/detroit.jpg" width="300" height="300"></a>
+                    <a href="https://www.enucuzoyun.com/horizon-zero-dawn-complete-edition/hikayesi/horizon-zero-dawn-hikayesi"><img title="Oyunun açılış sahnesinde, kabileden sürülmüş bir adam (Rost) tarafından bulunan bir bebeğin kabile analarına götürüldüğünü ve burada çocuğa ad verildiğini görüyoruz. Bu sevimli kızımızın adı Aloy. O da Rost gibi, herhangi bir kabileye mensup olmadığından yabanda yaşamak durumunda kalıyor. Rost da haliyle onun için bir baba figürü haline geliyor. Etrafı keşfetmek, robotları takip etmek, onlardan kaçınmak ve yeri geldiğinde onları etkisiz hale getirmek gibi şeyleri Aloy’a öğreten hep Rost oluyor." class="resimler box" src="resim/horizon.jpg" width="300" height="300"></a>
+                </div>
+                <div class="tanıtım">
+                   <div class="hizalama_üst_sol">Infamous Second Son</div>
+                   <div class=" hizalama_üst_orta">Detroit Become Human</div>
+                   <div class="hizalama_üst_sağ">Horizon Zero Dawn</div>
+                </div>
+                <div>
+                   
+                    <a href="https://www.enucuzoyun.com/watch_dogs/hikayesi/watch-dogs-hikayesi"><img title="Aiden Pearce ve ailesi geçmişte birileri tarafından saldırıya uğruyor ve yeğeni Lena ölüyor. Aiden Pearce ise elindeki Profiler adlı cihaz ile şehri bir silah gibi kullanarak saldırganlardan intikam almaya çalışıyor" class="resimler box" src="resim/watch dogs.jpg" width="300" height="300"></a>
+                    <a href="https://www.enucuzoyun.com/marvels-spider-man-remastered/hikayesi/marvels-spider-man-remastered-hikayesi"><img title="Marvel’s Spider-Man ile oyunculara yepyeni bir Örümcek Adam hikayesi sunuluyor. Henüz 23 yaşında olan Peter Parker, eğitim sürecini staj yaparak sürdürmektedir. Yıllardır sahip olduğu özel güç sayesinde New York şehrini ve halkını tehlikelerden koruyan Örümcek Adam, hikayenin henüz başında suç imparatoru Wilson Fisk’i, nam-ı diğer Kingpin’i alt ediyor. Ne var ki Kingpin’in ortadan kalkması şehri huzura değil, tam tersine yeni bir kaosa sürüklüyor. Kingpin’in bölgesini ele geçiren Inner Demons çetesi, kısa sürede şehrin yeni belası ve Örümcek Adam’ın da ana hedefi haline geliyor. Bu noktadan sonra ise karşımıza Electro’dan Scorpion’a kadar birçok düşman çıkıyor ama hikayenin gidişatına dair detayları oyunu oynayacaklara bırakmayı tercih ediyorum." class="resimler box" src="resim/spiderman.jpg"></a>
+                    <a href="https://www.merlininkazani.com/ratchet-clank-88051-inceleme#:~:text=Ratchet%2C%20Kaptan%20Qwark'%C4%B1n%20yeni,hatal%C4%B1%20robot%20oradan%20ka%C3%A7maya%20%C3%A7al%C4%B1%C5%9F%C4%B1r."><img title="Ratchet, Kaptan Qwark'ın yeni Galaktik Korucusu olacağının hayallerini kurarken de, uzak bir gezegende Savaş Robot'ları yaratılıyordur. Hatalı bir Savaş Robotu'nun üretildiğini fark edilince imha alarmı aktif olur ve böylelikle hatalı robot oradan kaçmaya çalışır." class="resimler box" src="resim/ratchet.jpg"></a>
+                </div>
+                <div class="tanıtım">
+                    <div class="hizalama_orta_sol">Watch Dogs</div>
+                    <div class="hizalama_orta_orta">Marvel Spiderman</div>
+                    <div class="hizalama_orta_sağ">Ratchet And Clank</div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div>
+            
+                <a href="https://www.enucuzoyun.com/uncharted-legacy-of-thieves-collection/hikayesi/uncharted-4-a-thiefs-end-hikayesi"><img title="Hazine avcılığından emekli olan Drake, bir anda hırsızların dünyasına geri dönmek zorunda kalır. Çok daha kişisel riskleri göze alarak, efsanevi korsan hazinesinin ardındaki tarihi komployu ortaya çıkarmak için küresel boyutta bir yolculuğa çıkar" class="resimler box" src="resim/uncharted.jpg"></a>
+                <a href="https://www.merlininkazani.com/kena-bridge-of-spirits-inceleme-inceleme-118652"><img title="Genç bir Ruh Rehberi olan Kena kutsal dağ tapınağını bulmak için terkedilmiş bir köye yolculuk yapar. Gezici ruhların hapsolduğu, balta girmemiş bir ormanda gizlenen bu unutulmuş topluluğun sırlarını ortaya çıkarmak için mücadele eder. Ürkek ve aldatıcı ruhlar ormanın her yerinde." class="resimler box" src="resim/kena.jpg"></a>
+                <a href="https://www.enucuzoyun.com/red-dead-redemption-2/hikayesi/red-dead-redemption-2-hikayesi"><img title="Red Dead Redemption 2 bir açık dünya oyunudur. Oyunda geçen zaman çetelerin ve silahlı soyguncuların yaşadığı Vahşi Batı döneminin son zamanlarıdır. Ana karakter Arthur Morgan üçüncü ve birinci şahıs bakış açısıyla kontrol edilebilmektedir. Oyun tek oyunculu ve çok oyunculu modları içermektedir." class="resimler box" src="resim/rdr2.jpg"></a>
+            </div>
+            <div class="tanıtım">
+                <div class="hizalama_alt_sol">Uncharted 4</div>
+                <div class="hizalama_alt_orta">Kena Bridge of Spirits</div>
+                <div class="hizalama_alt_sağ">Read Dead Redemption 2</div>
+            </div>
+            <div>
+                <h4>
+                <div>
+                    <a href="https://store.steampowered.com/?l=turkish"><button>>> Daha Fazla >></button></a>                
+                </div>
+                </h4>
+            </div>
+            <h1>Site Açıklaması</h1>
+            <p>Sitemizde sizin iyiliğinizi ve rahatlığınızı düşünmek üzerine yapılmıştır. İstediğiniz kadar araştırıp ve istediğiniz kadar okuyabilirsiniz iyi eğlenceler </p>
+        </div>
+        
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aksiyon Oyunları</title>
+    <link rel="icon" type="resim/little nighmares" href="resim/muhammed.jpg">
+</head>
+   <style>
+    link:any-link{
+        border-radius:500px;
+    }
+    body{
+            background: #131313;
+            color: #525252;
+            font-family: verdana,Arial,Helvetica,sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+        .sayfa{
+            width: 960px;
+            margin: auto;
+        }
+        .ust{
+            background: #131313;
+        }
+        #logo{
+            float: left;
+            width: 260px;
+            margin-top: 7px;
+            margin-left: 10px;
+            color: #000;
+            font-weight: bold 700px;
+        }
+        
+        #logo h1{
+            margin: 0;
+            padding: 0;
+            font-size: 42px;
+            text-transform: uppercase;
+            
+        }
+        
+        #logo h1 a{
+            font-family: Georgia;
+            text-decoration: none;
+            color: #000000;
+            letter-spacing: 3px;
+        }
+
+        ul {
+           text-align: left;
+           display: inline;
+           margin: 0;
+           padding: 15px 4px 17px 0;
+           list-style: none;
+           box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+        }
+        ul li {
+           font: bold 12px/18px sans-serif;
+           display: inline-block;
+           margin-right: -4px;
+           position: relative;
+           padding: 15px 20px;
+           background: #fff;
+           cursor: pointer;
+           transition: all 0.2s;
+        }
+        ul li:hover {
+           background: #555;
+           color: #fff;
+        }
+        ul li ul {
+           padding: 0;
+           position: absolute;
+           border-radius:30px;
+           top: 48px;
+           left: -20px;
+           width: 125px;
+           box-shadow: none;
+           display: none;
+           opacity: 0;
+           visibility: hidden;
+           transition: opacity 0.2s;
+        }
+        ul li ul li { 
+           background:rgb(50, 50, 50); 
+           display: block; 
+           color: #fff;
+           text-shadow: 0 -1px 0 #000;
+        }
+        ul li ul li:hover { background: #666; }
+        ul li:hover ul {
+           display: block;
+           opacity: 1;
+           visibility: visible;
+        }
+        #logo p{
+            color: #DBDBDB;
+            font-family: Georgia;
+            margin-left: 3px;
+            margin-top: 0;
+            padding-top: 0;
+            letter-spacing: 2px;
+        }
+        
+        #menu{
+            float: right;
+            width: 700px;
+            margin:auto;
+            padding: 0;
+            font-size: 13px;
+            text-align: right;
+        }
+        .menu_resim{
+            background-image:url(resim/);
+            margin-right: 5px;
+            margin-top:-5px;
+        }
+        
+        #menu ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+         
+        }
+        
+        #menu ul li{
+            display: inline;
+            margin-right: 35px;
+            float: left;
+        }
+        
+        #menu ul li a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            
+        }
+        .resimler{
+         border-radius: 50px;
+         margin-right:15px;
+         display: inline-block;
+        }
+        .tanıtım{
+            color:darkred;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+           
+        }
+        .isimler{
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bolder;
+            display: inline-block;
+        }
+        
+        .hizalama_üst_sol{
+            position: relative;
+            top: 17px;
+            left: 80px;
+            
+          
+        }
+        .hizalama_üst_orta{
+            position: relative;
+            top: -7px;
+            left: 430px;
+        }
+        .hizalama_üst_sağ{
+            position: relative;
+            top: -30px;
+            left: 720px;
+            
+        }
+        .hizalama_orta_sol{
+            position: relative;
+            top: 22px;
+            left: 80px;
+        }
+        .hizalama_orta_orta{
+            position: relative;
+            top: 0px;
+            left: 439px;
+        }
+        .hizalama_orta_sağ{
+            position: relative;
+            top: -25px;
+            left: 700px;
+        }
+        .hizalama_alt_sol{
+            position: relative;
+            top: 15px;
+            left: 83px;
+        }
+        .hizalama_alt_orta{
+            position: relative;
+            top: -7px;
+            left: 405px;
+        }
+        .hizalama_alt_sağ{
+            position: relative;
+            top: -29px;
+            left: 710px;
+        }
+        .box{
+            margin-top: 10px;
+            width: 300px;
+            height: 300px;
+            transition: 1s;
+        }
+        .box:hover{
+            transform: scale(1.1);
+            z-index: 1;
+        }
+        .kutular{
+            color:red;
+            background-color: #333;
+            border-radius: 10%;
+            border:darkred 2px solid;
+            float: left;
+            margin-top: 5px;
+            margin-left: 8px;
+            transition:all 0.4s;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+        }
+        p{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: darkred;
+        }
+        h1{
+            color: darkred;
+        }
+        .kutular:hover{
+            transform: translateY(-5px);
+        }
+        .clear{
+            clear: both;
+        }
+        .arkaplan_anasayfa{
+            position:relative;
+            width: 100%;
+            height: 100%;
+            background-image:url(resim/crysis.jpg);
+            background-size: cover;
+        }
+        button{
+            width: 150px;
+            height: 60px;
+            background-color: rgb(71, 71, 71);
+            border-radius:50px 45px 50px 45px;
+            color: white;
+            border-color: aqua;
+            transition:1s;
+        }
+        button:hover{
+            transform:translateY(-4px);
+        }
+
+
+        
+        
+    </style>
+</head>
+ 
+<body>
+    <div class="arkaplan_anasayfa">
+    <div class="sayfa">
+        <div class="menu_resim">
+        <div class="ust">
+            <div id="logo">
+                <h1><a href="İndex.html">Darkness</a></h1>
+                <p{color:black;}>Darkness gaming</p>
+            </div>
+            <div id="menu">
+                <ul>
+                    <a href="İndex.html"><li class="kutular">Anasayfa</li></a>
+                    <a href="Hakkimizda.html"><li class="kutular">Hakkımızda</li></a>
+                    <li class="kutular">
+                      Ürünler
+                      <ul>
+                        <a href="Aksiyon.html"><li class="kutular">Aksiyon</li></a>
+                        <a href="Korku.html" ><li class="kutular">Korku</li></a>
+                        <a href="Macera.html"><li class="kutular">Macera</li></a>
+                      </ul>
+                     <li class="kutular">
+                        Platformlar
+                        <ul>
+                        <a href="Aksiyon.html"><li class="kutular">PS4</li></a>
+                        <a href="Korku.html"><li class="kutular">PS</li></a>
+                        </ul>
+                     </li>
+                    </li></a>
+                    <a href="İletisim.html"><li class="kutular">İletişim</li></a>
+                </ul>
+            </div>
+        </div>
+            <div class="clear"></div>
+        </div>
+            <div class="orta">
+                <div>
+                    <a href="https://www.enucuzoyun.com/god-of-war/hikayesi/god-of-war-hikayesi"><img title="Spartalı savaşçı ve Eski Yunan savaş Tanrısı Kratos'un Yunan Tanrılarından intikamını almasından bu yana yıllar geçti ve şimdi küçük oğlu Atreus ile Eski Norveç'te Midgard aleminde yaşıyor. Oyun, Kratos'un ikinci karısı ve Atreus'un annesi olan Jötunn savaşçısı Faye'nin ölümünden sonra başlar ve son isteği Küllerinin Dokuz Krallığın en yüksek zirvesine yayılmasıydı. Kratos ve Atreus onun için bir cenaze ateşi hazırlar, ölümünün yasını tutar ve yakında Kratos'un isteğine göre bir ava çıkarlar. Kratos'un hayal kırıklığına uğramasına rağmen, Atreus yetersizliğini ve odaklanma eksikliğini kanıtlıyor ve Kratos'un Atreus'u yolculuğuna çıkarmayı yeniden gözden geçirmesini sağlıyor. Kratos yakında tanrısal güçlere sahip ve fiziksel olarak hiçbir şey hissedemeyen gizemli bir yabancı tarafından saldırıya uğrar. Görünüşte onu öldürdükten sonra, Kratos isteksizce Atreus'u yanına alır ve yolculuklarına başlar. " class="resimler box" src="resim/god of war.jpg" width="300" height="300"></a>
+                    <a href="https://www.enucuzoyun.com/crysis/hikayesi/crysis-hikayesi"><img title="Crysis 'te geçen olaylar Filipin denizindeki Lingshan Adaları üzerinde yakın gelecek kurgusu içerisinde geliştirilmiştir. Oyun konusuna halk göre bölgede gelişen çatışmalar hakkında ilk kez alakadar olmuştur.Konuya göre 2008 yılında Kuzey Kore'de ülke genelinde büyük değişikliklerde yol gösterici olmuş ve birçok ekonomik reformlar yapmış Jong Juul hala görev başındadır. Piyasa ekonomisiyle büyük şehirlerde fiilen bağımsız kuruluşlar oluşturulmuştur; Pyongyang önem itibarıyla ikinci yüksek elektronik teknolojisi merkezi haline gelmiş; Çin'in gelişmiş askeri teknolojisi büyük kısmı temin edilmiştir. Kuzey Kore'nin hesabıyla nükleer silaha sahip olarak politik alanında pek de mümkün görünmeyen durumlarını artırmıştır." class="resimler box" src="resim/crysis.jpg" width="300" height="300"></a>
+                    <a href="https://www.enucuzoyun.com/doom/hikayesi/doom-hikayesi"><img title="Doom 3'ten (2004) bu yana serideki ilk büyük yapıttır. Oyuncular, Mars'taki enerji madenciliği tesislerinde Union Aerospace Corporation tarafından serbest bırakılan Cehennemden gelen şeytani güçlerle savaşırken, Doom Slayer olarak bilinen isimsiz bir uzay denizcisinin rolünü üstlenirler." class="resimler box" src="resim/doom ethernal.jpg" width="300" height="300"></a>
+                </div>
+                <div class="tanıtım">
+                   <div class="hizalama_üst_sol">God Of War</div>
+                   <div class=" hizalama_üst_orta">Crysis</div>
+                   <div class="hizalama_üst_sağ">Doom Ethernal</div>
+                </div>
+                <div>
+                   
+                    <a href="https://www.enucuzoyun.com/elden-ring/hikayesi/elden-ring-hikayesi"><img title="Elden Ring içinde “Dış Tanrı” denilen, yalnızca bahsedildiğini duyduğumuz ve kendisini görmediğimiz Yüce İrade adında bir varlık var. Ayrıca Empyrean olarak adlandırılan bir tür tanrısal insan grubu var ki, bunlar tanrıdan çok insan olmalarına rağmen her an yeryüzünün tanrısı haline gelip dış tanrı olan bu Yüce İrade’nin yeryüzündeki temsilcisi olabilecek varlıklar. Aslında bu yapı ile tam olarak bir panteondan söz etmiş oluyoruz. İşte bu 2 kavram arasındaki ilişki de Yüce İrade’nin bir empyrean olan Marika’yı Elden Ring’in aracı olarak seçip, yeryüzünün tanrıça kraliçesi yapmasıyla başlıyor. Bununla beraber Kraliçe Marika, Yüce İrade’nin yol göstermesiyle yeryüzünde bir “altın düzen” kuruyor." class="resimler box" src="resim/elden ring.jpg" width="300" height="300"></a>
+                    <a href="https://www.enucuzoyun.com/red-dead-redemption-2/hikayesi/red-dead-redemption-2-hikayesi"><img title="Red Dead Redemption 2 bir açık dünya oyunudur. Oyunda geçen zaman çetelerin ve silahlı soyguncuların yaşadığı Vahşi Batı döneminin son zamanlarıdır. Ana karakter Arthur Morgan üçüncü ve birinci şahıs bakış açısıyla kontrol edilebilmektedir. Oyun tek oyunculu ve çok oyunculu modları içermektedir." class="resimler box" src="resim/rdr2.jpg"></a>
+                    <a href="https://www.enucuzoyun.com/the-witcher-enhanced-edition-directors-cut/hikayesi/the-witcher-hikayesi"><img title="Roman serisinin ana hikâyesi, Rivyalı Geralt ve Ciri üzerine odaklanır. Geralt ile aralarında kader bağı bulunan Ciri, ülkesinin istila edilmesi ve politikanın ortasında kaldığı için, Geralt tarafından Witcher olarak yetiştirilmek üzere Witcherların kalesi Kaer Morhen'e getirilir." class="resimler box" src="resim/witcher.jpg"></a>
+                </div>
+                <div class="tanıtım">
+                    <div class="hizalama_orta_sol">Elden Ring</div>
+                    <div class="hizalama_orta_orta">RDR2</div>
+                    <div class="hizalama_orta_sağ">Witcher Wild Hunt</div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div>
+            
+                <a href="https://www.enucuzoyun.com/uncharted-legacy-of-thieves-collection/hikayesi/uncharted-4-a-thiefs-end-hikayesi"><img title="Hazine avcılığından emekli olan Drake, bir anda hırsızların dünyasına geri dönmek zorunda kalır. Çok daha kişisel riskleri göze alarak, efsanevi korsan hazinesinin ardındaki tarihi komployu ortaya çıkarmak için küresel boyutta bir yolculuğa çıkar" class="resimler box" src="resim/uncharted.jpg"></a>
+                <a href="https://www.enucuzoyun.com/call-of-duty-modern-warfare-ii/hikayesi/call-of-duty-modern-warfare-ii-hikayesi"><img title="Oyunun hikâyesi kurgusal bir yakın gelecekte geçmektedir. Orta Doğu'da bulunan ve ismi belirtilmeyen bir ülkede, radikal bir liderin ülke başkanını öldürerek askerî darbe içerisinde olması ile birlikte; Rusya'daki aşırı milliyetçi yapılanmalarla ortaya çıkan iç savaş olmak üzere iki ayrı konu ele alınmaktadır" class="resimler box" src="resim/call of duty.jpg"></a>
+                <a href="https://www.chip.com.tr/haber/ghost-of-tsushima-directors-cut-incelemesi_96149.html#:~:text=Ghost%20of%20Tsushima'n%C4%B1n%20hikayesi,haber%20iletecek%20zaman%C4%B1%20ise%20yok."><img title="Ghost of Tsushima'nın hikayesi; 13'üncü yüzyıl sonlarına dayanıyor. Ana oyunda, Japonya'nın Tsushima Adası'ndayız ve Moğol işgali kapımıza dayanmış durumda. Moğol lider Hotun Han, tüm kuvvetleriyle saldırırken, anakaradan uzakta bir başına olan Tsushima'nın Şogun'a haber iletecek zamanı ise yok." class="resimler box" src="resim/ghost of.png"></a>
+            </div>
+            <div class="tanıtım">
+                <div class="hizalama_alt_sol">Uncharted 4</div>
+                <div class="hizalama_alt_orta">Call Of Duty 2</div>
+                <div class="hizalama_alt_sağ">Ghost Of Tsushima</div>
+            </div>
+            <div>
+                <h4>
+                <div>
+                    <a href="https://store.steampowered.com/?l=turkish"><button> Daha Fazla >></button></a>
+                </div>
+                </h4>
+            </div>
+            <h1>Site Açıklaması</h1>
+            <p>Sitemizde sizin iyiliğinizi ve rahatlığınızı düşünmek üzerine yapılmıştır. İstediğiniz kadar araştırıp ve istediğiniz kadar okuyabilirsiniz iyi eğlenceler </p>
+        </div>
+        
+    </div>
+</div>
+</body>
+</html>

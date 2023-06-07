@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darkness gaming</title>
+    <link rel="icon" type="resim/little nighmares" href="resim/muhammed.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+   <style>
+    body{
+            background: black;
+            color: #000000;
+            font-family: verdana,Arial,Helvetica,sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+
+        }
+        .sayfa{
+            width: 980px;
+            margin:auto;
+        }
+        .ust{
+            background: #131313;
+        }
+        #logo{
+            float: left;
+            width: 260px;
+            margin-top: 7px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        
+        #logo h1{
+            margin: 0;
+            padding: 0;
+            font-size: 42px;
+            text-transform: uppercase;
+            
+        }
+        
+        #logo h1 a{
+            font-family: Georgia;
+            text-decoration: none;
+            color: #DBDBDB;
+            letter-spacing: 3px;
+        }
+
+        ul {
+           text-align: left;
+           display: inline;
+           margin-left: 0;
+           padding: 15px 4px 17px 0;
+           list-style: none;
+           box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+        }
+        ul li {
+           font: bold 12px/18px sans-serif;
+           display: inline-block;
+           margin-right: -4px;
+           position: relative;
+           padding: 15px 20px;
+           background: #fff;
+           cursor: pointer;
+           transition: all 0.2s;
+        }
+        ul li:hover {
+           background: #555;
+           color: #fff;
+        }
+        ul li ul {
+           padding: 0;
+           position: absolute;
+           border-radius:30px;
+           top: 48px;
+           left: -20px;
+           width: 125px;
+           box-shadow: none;
+           display: none;
+           opacity: 0;
+           visibility: hidden;
+           transition: opacity 0.2s;
+           float: left;
+        }
+        ul li ul li { 
+           background: rgb(50, 50, 50); 
+           display: block; 
+           color: #fff;
+           float: left;
+           text-shadow: 0 -1px 0 #000;
+           transition: all 3s ease;
+           float: left;
+           
+        }
+        ul li ul li:hover { background: #666; }
+        ul li:hover ul {
+           display: block;
+           opacity: 1;
+           visibility: visible;
+        }
+        #logo p{
+            color: #DBDBDB;
+            font-family: Georgia;
+            margin-left: 3px;
+            margin-top: 0;
+            padding-top: 0;
+            letter-spacing: 2px;
+        }
+        .kutular{
+            color:red;
+            background-color: #333;
+            border-radius: 10%;
+            border:darkred 2px solid;
+            float: left;
+            margin-top: 25vh;
+            margin: 15px;
+            margin-left: 5px;
+            transition:all 0.4s;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .kutular:hover{
+            transform: translateY(-5px);
+        }
+        
+        
+        #menu{
+            float: right;
+            width: 700px;
+            margin-top: 30px;
+            padding: 0;
+            font-size: 13px;
+            text-align: right;
+        }
+        
+        #menu ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+         
+        }
+        
+        #menu ul li{
+            display: inline;
+            margin-right: 35px;
+            float: left;
+        }
+        
+        #menu ul li a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            
+        }
+        .resimler{
+         border-radius: 50px;
+         margin-right:7px;
+         display: inline-block;
+        }
+        .tanıtım{
+            color:darkred;
+            font-size: 20px;
+            font-family: Cambria, Cochi, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+            width:75%;
+           
+        }
+        .isimler{
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bolder;
+            display: inline-block;
+        }
+        .hizalama_1_sol{
+            position: relative;
+            top: 17px;
+            left: 45px;
+            
+          
+        }
+        .hizalama_1_orta{
+            position: relative;
+            top: -7px;
+            left: 280px;
+        }
+        .hizalama_1_sağ{
+            position: relative;
+            top: -30px;
+            left: 440px;
+            
+        }
+        .hizalama_1_sağ_sağ{
+            position: relative;
+            top: -53px;
+            left: 685px;
+            
+        }
+        .hizalama_2_sol{
+            position: relative;
+            top: 17px;
+            left: 40px;
+        }
+        .hizalama_2_orta{
+            position: relative;
+            top: -7px;
+            left: 280px;
+        }
+        .hizalama_2_sağ{
+            position: relative;
+            top: -30px;
+            left: 450px;
+            
+        }
+        .hizalama_2_sağ_sağ{
+            position: relative;
+            top: -53px;
+            left: 660px;
+        }
+        .hizalama_3_sol{
+            position: relative;
+            top:10px;
+            left:25px;
+        }
+        .hizalama_3_orta{
+            position: relative;
+            top:-13px;
+            left:220px;
+        }
+        .hizalama_3_sağ{
+            position: relative;
+            top:-36px;
+            left:464px;
+        }
+        .hizalama_3_sağ_sağ{
+            position: relative;
+            top:-60px;
+            left:680px;
+        }
+        .hizalama_4_sol{
+            position: relative;
+            top: 15px;
+            left:70px;
+        }
+        .hizalama_4_orta{
+            position: relative;
+            top:-8px;
+            left: 257px;
+        }
+        .hizalama_4_sağ{
+            position: relative;
+            top:-29px;
+            left:465px;
+        }
+        .hizalama_4_sağ_sağ{
+            position: relative;
+            top:-50px;
+            left:650px;
+        }
+
+        
+        .box{
+            width: 200px;
+            height: 200px;
+            transition: 1s;
+        }
+        .box:hover{
+            transform: scale(1.1);
+            z-index: 1;
+        }
+        p{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: darkred;
+        }
+        h1{
+            color: darkred;
+        }
+        .clear{
+            clear: both;
+        }
+        .ayarlama{
+            margin:0 auto;
+            width: 95%;
+        }
+        .arkaplan_anasayfa{
+            position:relative;
+            width: 100%;
+            height: 100%;
+            background-image:url(resim/Assasin\ arka\ planlı.png);
+            background-size: cover;
+        }
+        a[title]:hover::after{
+            position: absolute;
+            content: attr(title);
+            top:550px;
+            left: 0;
+            background-color: rgb(97, 97, 97);
+            color: darkred;
+            font-family: 'Roboto', sans-serif;
+
+        }
+        button{
+            width: 150px;
+            height: 60px;
+            background-color: rgb(71, 71, 71);
+            border-radius:50px 45px 50px 45px;
+            color: white;
+            border-color: aqua;
+            transition:1s;
+        }
+        button:hover{
+            transform:translateY(-4px);
+        }
+        
+    </style>
+</head>
+ 
+<body>
+    <div class="arkaplan_anasayfa">
+    <div class="sayfa">
+        <div class="ust">
+            <div id="logo">
+                <h1><a href="İndex.html">Darkness</a></h1>
+                <p>Darkness gaming</p>
+            </div>
+            <div id="menu">
+                <ul>
+                    <a href="hosgeldiniz.html"><li class="kutular">Anasayfa</li></a>
+                    <a href="Hakkimizda.html"><li class="kutular">Hakkımızda</li></a>
+                    <li class="kutular">
+                      Ürünler
+                      <ul>
+                        <a href="Aksiyon.html" target="_blank"><li class="kutular">Aksiyon</li></a>
+                        <a href="Korku.html" target="_blank"><li class="kutular">Korku</li></a>
+                        <a href="Macera.html" target="_blank"><li class="kutular">Macera</li></a>
+                      </ul>
+                     <li class="kutular">
+                        Platformlar
+                        <ul>
+                        <a href="Aksiyon.html" target="_blank"><li class="kutular">PS4</li></a>
+                        <a href="Korku.html" target="_blank"><li class="kutular">PS</li></a>
+                        <a href="Macera.html"><li class="kutular">XBOX</li></a>
+                        </ul>
+                     </li>
+                    </li></a>
+                    <a href="İletisim.html"><li class="kutular">İletişim</li></a>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+            <div class="ayarlama">
+                <p>
+                <div class="ana">Bu Yılın En Sevilen Oyunları</div>
+                </p>
+                <div>
+                <div>
+                   
+                    <a href="https://www.enucuzoyun.com/elden-ring/hikayesi/elden-ring-hikayesi"  title="Elden Ring içinde “Dış Tanrı” denilen, yalnızca bahsedildiğini duyduğumuz ve kendisini görmediğimiz Yüce İrade adında bir varlık var. Ayrıca Empyrean olarak adlandırılan bir tür tanrısal insan grubu var ki, bunlar tanrıdan çok insan olmalarına rağmen her an yeryüzünün tanrısı haline gelip dış tanrı olan bu Yüce İrade’nin yeryüzündeki temsilcisi olabilecek varlıklar. Aslında bu yapı ile tam olarak bir panteondan söz etmiş oluyoruz. İşte bu 2 kavram arasındaki ilişki de Yüce İrade’nin bir empyrean olan Marika’yı Elden Ring’in aracı olarak seçip, yeryüzünün tanrıça kraliçesi yapmasıyla başlıyor. Bununla beraber Kraliçe Marika, Yüce İrade’nin yol göstermesiyle yeryüzünde bir “altın düzen” kuruyor."><img class="resimler box" src="resim/elden ring.jpg" width="300" height="300"></a>
+                    <a href="https://www.enucuzoyun.com/red-dead-redemption-2/hikayesi/red-dead-redemption-2-hikayesi"><img title="Red Dead Redemption 2 bir açık dünya oyunudur. Oyunda geçen zaman çetelerin ve silahlı soyguncuların yaşadığı Vahşi Batı döneminin son zamanlarıdır. Ana karakter Arthur Morgan üçüncü ve birinci şahıs bakış açısıyla kontrol edilebilmektedir. Oyun tek oyunculu ve çok oyunculu modları içermektedir." class="resimler box" src="resim/rdr2.jpg"></a>
+                    <a href="https://www.enucuzoyun.com/the-witcher-enhanced-edition-directors-cut/hikayesi/the-witcher-hikayesi"><img title="Roman serisinin ana hikâyesi, Rivyalı Geralt ve Ciri üzerine odaklanır. Geralt ile aralarında kader bağı bulunan Ciri, ülkesinin istila edilmesi ve politikanın ortasında kaldığı için, Geralt tarafından Witcher olarak yetiştirilmek üzere Witcherların kalesi Kaer Morhen'e getirilir." class="resimler box" src="resim/witcher.jpg"></a>
+                    <a href="https://www.enucuzoyun.com/god-of-war/hikayesi/god-of-war-hikayesi-oncesinde-ne-anlatiyor"><img title="Spartalı savaşçı ve Eski Yunan savaş Tanrısı Kratos'un Yunan Tanrılarından intikamını almasından bu yana yıllar geçti ve şimdi küçük oğlu Atreus ile Eski Norveç'te Midgard aleminde yaşıyor. Oyun, Kratos'un ikinci karısı ve Atreus'un annesi olan Jötunn savaşçısı Faye'nin ölümünden sonra başlar ve son isteği Küllerinin Dokuz Krallığın en yüksek zirvesine yayılmasıydı. Kratos ve Atreus onun için bir cenaze ateşi hazırlar, ölümünün yasını tutar ve yakında Kratos'un isteğine göre bir ava çıkarlar. Kratos'un hayal kırıklığına uğramasına rağmen, Atreus yetersizliğini ve odaklanma eksikliğini kanıtlıyor ve Kratos'un Atreus'u yolculuğuna çıkarmayı yeniden gözden geçirmesini sağlıyor. Kratos yakında tanrısal güçlere sahip ve fiziksel olarak hiçbir şey hissedemeyen gizemli bir yabancı tarafından saldırıya uğrar. Görünüşte onu öldürdükten sonra, Kratos isteksizce Atreus'u yanına alır ve yolculuklarına başlar." src="resim/god of war.jpg" class="resimler box"></a>
+                </div>
+                <div class="tanıtım">
+                    <div class="hizalama_1_sol">Elden Ring</div>
+                    <div class="hizalama_1_orta">RDR2</div>
+                    <div class="hizalama_1_sağ">Witcher Wild Wunt</div>
+                    <div class="hizalama_1_sağ_sağ">God Of War</div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div>
+            
+                <a href="https://www.enucuzoyun.com/uncharted-legacy-of-thieves-collection/hikayesi/uncharted-4-a-thiefs-end-hikayesi"><img title="Hazine avcılığından emekli olan Drake, bir anda hırsızların dünyasına geri dönmek zorunda kalır. Çok daha kişisel riskleri göze alarak, efsanevi korsan hazinesinin ardındaki tarihi komployu ortaya çıkarmak için küresel boyutta bir yolculuğa çıkar" class="resimler box" src="resim/uncharted.jpg"></a>
+                <a href="https://www.enucuzoyun.com/call-of-duty-modern-warfare-ii/hikayesi/call-of-duty-modern-warfare-ii-hikayesi"><img title="Oyunun hikâyesi kurgusal bir yakın gelecekte geçmektedir. Orta Doğu'da bulunan ve ismi belirtilmeyen bir ülkede, radikal bir liderin ülke başkanını öldürerek askerî darbe içerisinde olması ile birlikte; Rusya'daki aşırı milliyetçi yapılanmalarla ortaya çıkan iç savaş olmak üzere iki ayrı konu ele alınmaktadır" class="resimler box" src="resim/call of duty.jpg"></a>
+                <a href="https://www.enucuzoyun.com/little-nightmares-ii/hikayesi/little-nightmares-2-hikayesi"><img title="Tıpkı ilk oyunda olduğu gibi, Little Nightmares 2’de sizi garip bir dünyanın içine bırakıyor. Mono isminde, kafasına kağıt torba geçirmiş bir karakteri kontrol ediyoruz. Karakterimizin neden kafasında bir kağıt torba var, tuzaklarla dolu ormana nasıl geldi gibi soruları kendimize sorduğumuz sırada avcının kabinine ulaşıyoruz. Burada ilk oyundan tanıdığımız Six ile karşılaşıyor ve onu kurtardıktan sonra, avcının elinden kurtulmaya çalışıyoruz." class="resimler box" src="resim/little nightmares.jpg"></a>
+                <a href="https://www.enucuzoyun.com/doom/hikayesi/doom-hikayesi"><img src="resim/doom ethernal.jpg" class="resimler box"></a>
+            </div>
+            <div class="tanıtım">
+                <div class="hizalama_2_sol">Uncharted 4</div>
+                <div class="hizalama_2_orta">COD 2</div>
+                <div class="hizalama_2_sağ">Little Nighmares</div>
+                <div class="hizalama_2_sağ_sağ">Doom Ethernal</div>
+            </div>
+            <div class="clear"></div>
+            <div>
+                <a href="https://www.enucuzoyun.com/the-callisto-protocol/hikayesi/the-callisto-protocol-hikayesi"><img title="2320'de Jacob Lee (Josh Duhamel)[4] ve partneri Max Barrow (Jeff Schine) United Jupiter Company (UJC) için sözleşmeli olarak çalışan yük sevkiyatcılarıdır ve UJC Charon gemisinin pilotlarıdır. Yakın bir zamanda Callisto'nun üstünde bulunan, UJC'nin yönetiminde olan Black Iron Hapishanesi ile Europa arasında etiketsiz uçucu bir madde taşıma sevkiyatı yaparlar ve bu görev emekli olmalarını sağlayacak kadar kazançlıdır. Callisto güvenliğinden izin alıp, rotalarını Europa'ya çevirdikten sonra çok sayıda, terörist saldırısından sorumlu olan Outer Way, Charon gemisine saldırı düzenler ve geminin Callisto'ya düşmesine sebep olur. Max ölür, Jacob ve Outer Way'in lideri Dani Nakamura (Karen Fukuhara) kazadan kurtulur. Warden Duncan Cole'un (James C. Mathis III) emirleri üzerine ikisi de Black Iron Hapishanesi''nin baş güvenlik şefi olan Kaptan Leon Ferris (Sam Witwer) tarafından kurtarılıp sorgusuz sualsiz hapse atılır. Eziyetli bir içeri alım sonrası bayılan Jacob uyanır ve biyofaj denilen, bilinmeyen bir hastalık tarafından etkilenmiş olan mahkumların hapishaneyi istila ettiklerini görür. Jacob, bir kaçış planı olduğunu söyleyen, uzun zamandır burada mahkum olan Elias Porter (Zeke Alton) ile karşılaşır ve gitgide kötüleşen hapishanenin, hapishane güvenlik sisteminin ve biyofajların üstesinden gelmek için birlikte çalışmaya karar verirler." class="resimler box" src="resim/calisto.jpg"></a>
+                <a href="https://www.enucuzoyun.com/horizon-zero-dawn-complete-edition/hikayesi/horizon-zero-dawn-hikayesi"><img title="Oyunun açılış sahnesinde, kabileden sürülmüş bir adam (Rost) tarafından bulunan bir bebeğin kabile analarına götürüldüğünü ve burada çocuğa ad verildiğini görüyoruz. Bu sevimli kızımızın adı Aloy. O da Rost gibi, herhangi bir kabileye mensup olmadığından yabanda yaşamak durumunda kalıyor. Rost da haliyle onun için bir baba figürü haline geliyor. Etrafı keşfetmek, robotları takip etmek, onlardan kaçınmak ve yeri geldiğinde onları etkisiz hale getirmek gibi şeyleri Aloy’a öğreten hep Rost oluyor." class="resimler box" src="resim/horizon.jpg"></a>
+                <a href="https://www.enucuzoyun.com/dying-light/hikayesi/dying-light-hikayesi"><img title="Gizli GRE ajanı Kyle Crane, şantaj için kullanan Kadir Süleyman tarafından çalınan hassas bir dosyayı almak için Harran'a havadan bırakılır. Crane, enfekte bir kişi tarafından ısırılır, ancak Jade Aldemir tarafından kurtarılır ve Kule adı verilen hayatta kalan bir sığınağa götürülür." class="resimler box" src="resim/dying light.jpg"></a>
+                <a href="https://www.enucuzoyun.com/watch_dogs/hikayesi/watch-dogs-hikayesi"><img title="Aiden Pearce ve ailesi geçmişte birileri tarafından saldırıya uğruyor ve yeğeni Lena ölüyor. Aiden Pearce ise elindeki Profiler adlı cihaz ile şehri bir silah gibi kullanarak saldırganlardan intikam almaya çalışıyor" class="resimler box" src="resim/watch dogs.jpg"></a>
+
+            </div>
+            <div class="tanıtım">
+                <div class="hizalama_3_sol">Calisto Protocol</div>
+                <div class="hizalama_3_orta">Horizon Zero Down</div>
+                <div class="hizalama_3_sağ">Dying Light</div>
+                <div class="hizalama_3_sağ_sağ">Watch Dogs</div>
+
+            </div>
+            <div class="clear"></div>
+            <div>
+                <a href="https://www.enucuzoyun.com/alien-isolation/hikayesi/alien-isolation-hikayesi"><img title="Annesinden uzun zamandır haber alamayan Amanda, karşısına çıkan ilk ipucunu takip ediyor ve devasa boyuttaki uzay gemisi Sevastopol'a giriş yapıyor. Ama ne giriş! Daha ilk dakikada tüm işler berbat oluyor ve yaşamla ölüm arasındaki gerilim dolu bir maceranın içinde buluyoruz kendimizi." class="resimler box" src="resim/alien.jpg"></a>
+                <a href="https://www.enucuzoyun.com/days-gone/hikayesi/days-gone-hikayesi"><img class="resimler box" title="Küresel bir salgının başlamasından iki yıl sonra kıyamet sonrası Oregon'da geçen oyunda eski kanun kaçağı Deacon St. John, karısı Sarah'nın hala hayatta olma olasılığını keşfeder ve bu da Deacon'ı onu bulmak için bir arayışa sokar." src="resim/days gone.jpg"></a>
+                <a href="https://www.enucuzoyun.com/dead-space/hikayesi/dead-space-hikayesi"><img class="resimler box" title="13 Ekim 2008 tarihinde PlayStation 3 ve Xbox 360 oyun platformları, daha sonra 20 Ekim 2008 tarihinde de PC platformu için yayınlanmıştır. Oyunun yapımcılığını Electronic Arts: Redwood Shores firması üstlenmiştir. Oyun korku - macera türündedir ve üçüncü şahıs nişancı tarzında bir oynanışa sahiptir. Oyuncu Isaac Clarke adlı bir sistem mühendisini canlandırmaktadır. Başlıca rolü, kazı amaçlı çalışan Ishimura adlı uzay gemisinde Necromorphs adı verilen yaratıklarla savaşmak olmuştur." src="resim/dead space.jpg"></a>
+                <a href="https://www.enucuzoyun.com/marvels-spider-man-remastered/hikayesi/marvels-spider-man-remastered-hikayesi"><img class="resimler box" title="Marvel’s Spider-Man ile oyunculara yepyeni bir Örümcek Adam hikayesi sunuluyor. Henüz 23 yaşında olan Peter Parker, eğitim sürecini staj yaparak sürdürmektedir. Yıllardır sahip olduğu özel güç sayesinde New York şehrini ve halkını tehlikelerden koruyan Örümcek Adam, hikayenin henüz başında suç imparatoru Wilson Fisk’i, nam-ı diğer Kingpin’i alt ediyor. Ne var ki Kingpin’in ortadan kalkması şehri huzura değil, tam tersine yeni bir kaosa sürüklüyor. Kingpin’in bölgesini ele geçiren Inner Demons çetesi, kısa sürede şehrin yeni belası ve Örümcek Adam’ın da ana hedefi haline geliyor. Bu noktadan sonra ise karşımıza Electro’dan Scorpion’a kadar birçok düşman çıkıyor ama hikayenin gidişatına dair detayları oyunu oynayacaklara bırakmayı tercih ediyorum." src="resim/spiderman.jpg"></a>
+            </div>
+            <div class="tanıtım">
+                <div class="hizalama_4_sol">Alien</div>
+                <div class="hizalama_4_orta">Days Gone</div>
+                <div class="hizalama_4_sağ">Dead Space</div>
+                <div class="hizalama_4_sağ_sağ">Marvel Spiderman</div>
+
+            </div>
+
+            
+            <div>  
+               <a href="https://store.steampowered.com/?l=turkish"><button>>> Daha Fazla >></button></a>
+            <h1>Site Açıklaması</h1>
+            <p>Sitemizde sizin iyiliğinizi ve rahatlığınızı düşünmek üzerine yapılmıştır. İstediğiniz kadar araştırıp ve istediğiniz kadar okuyabilirsiniz iyi eğlenceler </p>
+
+         </div>
+    </div>
+</div>
+</body>
+</html>

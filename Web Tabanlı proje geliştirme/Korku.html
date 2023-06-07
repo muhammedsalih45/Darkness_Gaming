@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korku Oyunları</title>
+    <link rel="icon" type="resim/little nighmares" href="resim/muhammed.jpg">
+    <link rel="stylesheet" href="iletişim.html">
+    <link rel="stylesheet" href="hakkımızda.html">
+</head>
+   <style>
+    body{
+            background: #131313;
+            color: #525252;
+            font-family: verdana,Arial,Helvetica,sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+        .sayfa{
+            width: 960px;
+            margin: auto;
+        }
+        .ust{
+            background: #131313;
+        }
+        #logo{
+            float: left;
+            width: 260px;
+            margin-top: 7px;
+            margin-left: 10px;
+        }
+        
+        #logo h1{
+            margin: 0;
+            padding: 0;
+            font-size: 42px;
+            text-transform: uppercase;
+            
+        }
+        
+        #logo h1 a{
+            font-family: Georgia;
+            text-decoration: none;
+            color: #DBDBDB;
+            letter-spacing: 3px;
+        }
+
+        ul {
+           text-align: left;
+           display: inline;
+           margin: 0;
+           padding: 15px 4px 17px 0;
+           list-style: none;
+           box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+        }
+        ul li {
+           font: bold 12px/18px sans-serif;
+           display: inline-block;
+           margin-right: -4px;
+           position: relative;
+           padding: 15px 20px;
+           background: #fff;
+           cursor: pointer;
+           transition: all 0.2s;
+        }
+        ul li:hover {
+           background: #555;
+           color: #fff;
+        }
+        ul li ul {
+           padding: 0;
+           position: absolute;
+           border-radius:30px;
+           top: 48px;
+           left: -20px;
+           width: 125px;
+           box-shadow: none;
+           display: none;
+           opacity: 0;
+           visibility: hidden;
+           transition: opacity 0.2s;
+        }
+        ul li ul li { 
+           background:rgb(50, 50, 50); 
+           display: block; 
+           color: #fff;
+           text-shadow: 0 -1px 0 #000;
+        }
+        ul li ul li:hover { background: #666; }
+        ul li:hover ul {
+           display: block;
+           opacity: 1;
+           visibility: visible;
+        }
+        #logo p{
+            color: #DBDBDB;
+            font-family: Georgia;
+            margin-left: 3px;
+            margin-top: 0;
+            padding-top: 0;
+            letter-spacing: 2px;
+        }
+        
+        #menu{
+            float: right;
+            width: 650px;
+            margin: 30px 0 0 0;
+            padding: 0;
+            font-size: 13px;
+            text-align: right;
+        }
+        
+        #menu ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+         
+        }
+        
+        #menu ul li{
+            display: inline;
+            margin-right: 35px;
+            float: left;
+        }
+        
+        #menu ul li a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            
+        }
+        .resimler{
+         border-radius: 50px;
+         margin-right:15px;
+         display: inline-block;
+        }
+        .tanıtım{
+            color:darkred;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+           
+        }
+        .isimler{
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bolder;
+            display: inline-block;
+        }
+        
+        .hizalama_üst_sol{
+            position: relative;
+            top: 17px;
+            left: 80px;
+            
+          
+        }
+        .hizalama_üst_orta{
+            position: relative;
+            top: -7px;
+            left: 430px;
+        }
+        .hizalama_üst_sağ{
+            position: relative;
+            top: -30px;
+            left: 720px;
+            
+        }
+        .hizalama_orta_sol{
+            position: relative;
+            top: 22px;
+            left: 85px;
+        }
+        .hizalama_orta_orta{
+            position: relative;
+            top: 0px;
+            left: 430px;
+        }
+        .hizalama_orta_sağ{
+            position: relative;
+            top: -25px;
+            left: 725px;
+        }
+        .hizalama_alt_sol{
+            position: relative;
+            top: 15px;
+            left: 83px;
+        }
+        .hizalama_alt_orta{
+            position: relative;
+            top: -7px;
+            left: 405px;
+        }
+        .hizalama_alt_sağ{
+            position: relative;
+            top: -29px;
+            left: 710px;
+        }
+        .box{
+            margin-top: 10px;
+            width: 300px;
+            height: 300px;
+            transition: 1s;
+        }
+        .box:hover{
+            transform: scale(1.1);
+            z-index: 1;
+        }
+        .clear{
+            clear: both;
+        }
+        .kutular{
+            color:red;
+            background-color: #333;
+            border-radius: 10%;
+            border:darkred 2px solid;
+            margin:10px;
+            transition:all 0.4s;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+        }
+        p{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: darkred;
+        }
+        h1{
+            color: darkred;
+        }
+        .kutular:hover{
+            transform: translateY(-5px);
+        }
+        .arkaplan_anasayfa{
+            position:relative;
+            width: 100%;
+            height:100%;
+            background-image:url(resim/alien.jpg);
+            background-size: cover;
+        }
+        button{
+            width: 150px;
+            height: 60px;
+            background-color: rgb(71, 71, 71);
+            border-radius:50px 45px 50px 45px;
+            color: white;
+            border-color: aqua;
+            transition:1s;
+        }
+        button:hover{
+            transform:translateY(-4px);
+        }
+        
+        
+        
+    </style>
+</head>
+ 
+<body>
+    <div class="arkaplan_anasayfa">
+    <div class="sayfa">
+        <div class="ust">
+            <div id="logo">
+                <h1><a href="İndex.html">Darkness</a></h1>
+                <p>Darkness gaming</p>
+            </div>
+            <div id="menu">
+                <ul>
+                    <a href="İndex.html "><li class="kutular">Anasayfa</li></a>
+                    <a href="Hakkimizda.html"><li class="kutular">Hakkımızda</li></a>
+                    <li class="kutular">
+                      Ürünler
+                      <ul>
+                        <a href="Aksiyon.html"><li class="kutular">Aksiyon</li></a>
+                        <a href="Korku.html"><li class="kutular">Korku</li></a>
+                        <a href="Macera.html"><li class="kutular">Macera</li></a>
+                      </ul>
+                    </li></a>
+                    <a href="İletisim.html"><li class="kutular">İletişim</li></a>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+            <div class="orta">
+                <div>
+                    <a href="https://www.enucuzoyun.com/dead-space/hikayesi/dead-space-hikayesi"><img title="13 Ekim 2008 tarihinde PlayStation 3 ve Xbox 360 oyun platformları, daha sonra 20 Ekim 2008 tarihinde de PC platformu için yayınlanmıştır. Oyunun yapımcılığını Electronic Arts: Redwood Shores firması üstlenmiştir. Oyun korku - macera türündedir ve üçüncü şahıs nişancı tarzında bir oynanışa sahiptir. Oyuncu Isaac Clarke adlı bir sistem mühendisini canlandırmaktadır. Başlıca rolü, kazı amaçlı çalışan Ishimura adlı uzay gemisinde Necromorphs adı verilen yaratıklarla savaşmak olmuştur." class="resimler box" src="resim/dead space.jpg" width="300" height="300"></a>
+                    <a href="https://www.enucuzoyun.com/alien-isolation/hikayesi/alien-isolation-hikayesi"><img title="Annesinden uzun zamandır haber alamayan Amanda, karşısına çıkan ilk ipucunu takip ediyor ve devasa boyuttaki uzay gemisi Sevastopol'a giriş yapıyor. Ama ne giriş! Daha ilk dakikada tüm işler berbat oluyor ve yaşamla ölüm arasındaki gerilim dolu bir maceranın içinde buluyoruz kendimizi." class="resimler box" src="resim/alien.jpg" width="300" height="300"></a>
+                    <a href="https://www.enucuzoyun.com/the-callisto-protocol/hikayesi/the-callisto-protocol-hikayesi"><img title="2320'de Jacob Lee (Josh Duhamel)[4] ve partneri Max Barrow (Jeff Schine) United Jupiter Company (UJC) için sözleşmeli olarak çalışan yük sevkiyatcılarıdır ve UJC Charon gemisinin pilotlarıdır. Yakın bir zamanda Callisto'nun üstünde bulunan, UJC'nin yönetiminde olan Black Iron Hapishanesi ile Europa arasında etiketsiz uçucu bir madde taşıma sevkiyatı yaparlar ve bu görev emekli olmalarını sağlayacak kadar kazançlıdır. Callisto güvenliğinden izin alıp, rotalarını Europa'ya çevirdikten sonra çok sayıda, terörist saldırısından sorumlu olan Outer Way, Charon gemisine saldırı düzenler ve geminin Callisto'ya düşmesine sebep olur. Max ölür, Jacob ve Outer Way'in lideri Dani Nakamura (Karen Fukuhara) kazadan kurtulur. Warden Duncan Cole'un (James C. Mathis III) emirleri üzerine ikisi de Black Iron Hapishanesi''nin baş güvenlik şefi olan Kaptan Leon Ferris (Sam Witwer) tarafından kurtarılıp sorgusuz sualsiz hapse atılır. Eziyetli bir içeri alım sonrası bayılan Jacob uyanır ve biyofaj denilen, bilinmeyen bir hastalık tarafından etkilenmiş olan mahkumların hapishaneyi istila ettiklerini görür. Jacob, bir kaçış planı olduğunu söyleyen, uzun zamandır burada mahkum olan Elias Porter (Zeke Alton) ile karşılaşır ve gitgide kötüleşen hapishanenin, hapishane güvenlik sisteminin ve biyofajların üstesinden gelmek için birlikte çalışmaya karar verirler." class="resimler box" src="resim/calisto.jpg" width="300" height="300"></a>
+                </div>
+                <div class="tanıtım">
+                   <div class="hizalama_üst_sol">Dead Space</div>
+                   <div class=" hizalama_üst_orta">Alien</div>
+                   <div class="hizalama_üst_sağ">Calisto Protocol</div>
+                </div>
+                <div>
+                   
+                    <a href="https://www.enucuzoyun.com/days-gone/hikayesi/days-gone-hikayesi"><img title="Küresel bir salgının başlamasından iki yıl sonra kıyamet sonrası Oregon'da geçen oyunda eski kanun kaçağı Deacon St. John, karısı Sarah'nın hala hayatta olma olasılığını keşfeder ve bu da Deacon'ı onu bulmak için bir arayışa sokar." class="resimler box" src="resim/days gone.jpg" width="300" height="300"></a>
+                    <a href="https://www.enucuzoyun.com/outlast/hikayesi/outlast-hikayesi"><img title="Oyunda, Miles Upshur adındaki bir serbest çalışan gazetecinin Lake County, Colorado dağlarının derinliklerinde bulunan Mount Massive Asylum isimli garip olaylar olduğu konuşulan bir akıl hastanesini haber yapmak için bir el kamerası ile tek başına girdikten sonra yaşadığı olaylar oynanmaktadır." class="resimler box" src="resim/outlast.jpg"></a>
+                    <a href="https://www.enucuzoyun.com/dying-light/hikayesi/dying-light-hikayesi"><img title="Gizli GRE ajanı Kyle Crane, şantaj için kullanan Kadir Süleyman tarafından çalınan hassas bir dosyayı almak için Harran'a havadan bırakılır. Crane, enfekte bir kişi tarafından ısırılır, ancak Jade Aldemir tarafından kurtarılır ve Kule adı verilen hayatta kalan bir sığınağa götürülür." class="resimler box" src="resim/dying light.jpg"></a>
+                </div>
+                <div class="tanıtım">
+                    <div class="hizalama_orta_sol">Days Gone</div>
+                    <div class="hizalama_orta_orta">Outlast</div>
+                    <div class="hizalama_orta_sağ">Dying Light</div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div>
+            
+                <a href="https://www.merlininkazani.com/until-dawn-83416-inceleme#:~:text=Until%20Dawn%2C%20t%C4%B1pk%C4%B1%20Alan%20Wake,ikili%20se%C3%A7imler%20aras%C4%B1nda%20bo%C4%9Fulmaktan%20ibarettir."><img title="Until Dawn, tıpkı Alan Wake gibi dizi şeklinde ilerliyor ve her bölümün sonunda psikoloğun odasında uyanıyoruz. Burada psikolog bize, yani konsol başında oturan oyuncuya sesleniyor. İstediğiniz kadar kıvranın en nihayetinde hayatımız ikili seçimler arasında boğulmaktan ibarettir." class="resimler box" src="resim/until dawn.jpg"></a>
+                <a href="https://www.enucuzoyun.com/resident-evil-village/hikayesi/resident-evil-village-hikayesi"><img title="oyununun trajik olayları sonrasında, Ethan Winters ve eşi Mia hayatlarında yeni bir sayfa açmış, geçmişi arkalarında bırakmış ve huzur içinde yaşamlarına devam etmektedirler. Chris Redfield, önceki Resident Evil oyunlarının kahramanı, bir anda ortaya çıkar ve huzurlu yaşamlarını bozarak harap olmuş Ethan Winters'ın kendisini Avrupa'da gizemli bir köyde bulmasına yol açar ve Ethan'ı yeni bir kabusun içine sürükler.[3]" class="resimler box" src="resim/resident evil.jpg"></a>
+                <a href="https://www.enucuzoyun.com/little-nightmares/hikayesi/little-nightmares-hikayesi"><img title="Tarsier Studios tarafından geliştirilen ve Bandai Namco Entertainment tarafından Microsoft Windows, Nintendo Switch, PlayStation 4, Xbox One ve Stadia için yayınlanan bir bulmaca platform korku macera oyunudur. Gizemli bir dünyada geçen Little Nightmares, canavar, çarpık varlıkların yaşadığı demir bir gemi olan Maw'dan kaçması gereken aç küçük bir kız olan Six'in yolculuğunu konu ediyor. Oyun, kontrol noktası sistemini ve kısa uzunluğunu eleştirirken atmosferini, grafiklerini ve sesini öven eleştirmenlerle piyasaya sürüldükten sonra olumlu eleştiriler aldı. Bir prequel, Little Nightmares II, Şubat 2021'de yayınlandı." class="resimler box" src="resim/little nightmares.jpg"></a>
+            </div>
+            <div class="tanıtım">
+                <div class="hizalama_alt_sol">Until Dawn</div>
+                <div class="hizalama_alt_orta">Resident Evil</div>
+                <div class="hizalama_alt_sağ">Little Nighmares</div>
+            </div>
+            <div>
+                <h4>
+                <div>
+                    <a href="https://store.steampowered.com/?l=turkish"><button>>> Daha Fazla >></button></a>
+                </div>
+                </h4>
+            </div>
+            <h1>Site Açıklaması</h1>
+            <p>Sitemizde sizin iyiliğinizi ve rahatlığınızı düşünmek üzerine yapılmıştır. İstediğiniz kadar araştırıp ve istediğiniz kadar okuyabilirsiniz iyi eğlenceler </p>
+        </div>
+        
+    </div>
+</div>
+</body>
+</html>
